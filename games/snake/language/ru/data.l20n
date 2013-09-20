@@ -1,0 +1,17 @@
+<appTitle "Альфа-вагон">
+<back "Выход">
+<score "Рекорды">
+<play "Играть">
+<myName "Я">
+<name "Имя">
+<nameInput
+  placeholder: "Хамтни Хамберт"
+  >
+<whoAreYou "Ты ХТО такой?!">
+<bb "Давай, до свидания!">
+<scoreName "Очков: ">
+<gameOver "Всё, издохли">
+<PlayAgain "Чиво?!">
+<quit "Давай, до свидания!">
+<gameOverScore "Ваш чудо-рекорд: ">
+<gameBack "Бежим! Бежим!">

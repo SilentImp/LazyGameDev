@@ -1,0 +1,17 @@
+<appTitle "Sire-train">
+<back "Back">
+<score "Scores">
+<play "Play">
+<myName "I am">
+<name "Name">
+<nameInput
+  placeholder: "Hamtni Humbert"
+  >
+<whoAreYou "Who THE HELL are you?">
+<bb "See ya, bye-bye!">
+<scoreName "Score: ">
+<gameOver "Game Over">
+<PlayAgain "Play again!">
+<quit "Bye-bye!">
+<gameOverScore "Your score: ">
+<gameBack "Escape!">

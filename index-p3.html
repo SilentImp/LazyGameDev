@@ -1,0 +1,450 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+  <meta charset="UTF-8">
+  <title>Lazy Game Dev | Для тех, кто всегда хотел, но боялся попробовать</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+  <script src="js/modernizr.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.keyboard.js"></script>
+  <script src="js/jquery.hotkeys.js"></script>
+  <script src="js/raphael-min.js"></script>
+  <script src="js/g.raphael-min.js"></script>
+  <script src="js/g.pie-min.js"></script>
+  <script src="js/gRaphaelJS_multi_pie.js"></script>
+  <script src="js/prism.js"></script>
+  <script src="js/slidsterController.js"></script>
+
+
+  <link rel="stylesheet" media="all" href="css/common.css" />
+</head>
+<body>
+  <section class="slides">
+
+   <article class="center center-text engi"><div class="wrapper">
+      <hgroup>
+        <h1>Движки</h1>
+      </hgroup>
+    </div></article>
+
+    <article class="engine-link center-text">
+      <h1>BOX 2D</h1>
+      <img src="img/box2d-link.svg" alt="vcard">
+      <h1>http://box2d.org/</h1>
+    </article>
+
+    <article class="engine-link center-text">
+      <h1>JigLibJS</h1>
+      <img src="img/jig-link.svg" alt="vcard">
+      <h1>http://jiglibjs.org/</h1>
+    </article>
+
+    <article class="engine-link center-text">
+      <h1>PolyK</h1>
+      <img src="img/polyk-link.svg" alt="vcard">
+      <h1>http://goo.gl/VEVQa</h1>
+    </article>
+
+    <article class="engine-link center-text">
+      <h1>Cocos2d</h1>
+      <img src="img/cocos2d-link.svg" alt="vcard">
+      <h1>http://goo.gl/nmkKX</h1>
+    </article>
+
+
+    <article class="l10n center-text center"><div class="wrapper">
+      <hgroup>
+        <h1>Локализация</h1>
+      </hgroup>
+    </div></article>
+
+    <article class="engine-link center-text">
+      <h1>Handlebars</h1>
+      <img src="img/handlebarsjs-link.svg" alt="vcard">
+      <h1>http://handlebarsjs.com/</h1>
+    </article>
+
+    <article class="handlebarsjs-1 center"><div class="wrapper">
+<pre><code class="language-markup">&lt;div class="entry">
+  &lt;h1>{{title}}&lt;/h1>
+  &lt;div class="body">
+    {{body}}
+  &lt;/div>
+&lt;/div></code></pre>
+    </div></article>
+
+    <article class="engine-link center-text">
+      <h1>L20N</h1>
+      <img src="img/l20n-link.svg" alt="vcard">
+      <h1>http://l20n.org/</h1>
+    </article>
+
+    <article class="l20n-1 center"><div class="wrapper">
+<pre><code class="language-markup">&lt;link
+  rel="localization"
+  href="language/l20n.json">
+&lt;script
+  src="scripts/l20n.js">&lt;/script></code></pre>
+    </div></article>
+
+    <article class="l20n-2 center"><div class="wrapper">
+<pre><code class="language-markup">{
+  "locales": [
+    "en",
+    "ru"
+  ],
+  "default_locale": "ru",
+  "resources": [
+    "./{{locale}}/data.l20n"
+  ]
+}</code></pre>
+    </div></article>
+
+    <article class="l20n-3 center"><div class="wrapper">
+<pre><code class="language-markup">&lt;title "Renju">
+&lt;hello """
+Hello, {{ $user.name }}.
+Let's play!
+"""></code></pre>
+    </div></article>
+
+    <article class="l20n-4 center"><div class="wrapper">
+<pre><code class="language-markup">&lt;h1
+  data-l10n-id="title"
+  >&lt;/h1></code></pre>
+    </div></article>
+
+    <article class="l20n-5 center"><div class="wrapper">
+<pre><code class="language-markup">&lt;script
+  type="application/l10n-data+json">
+  {
+    "user": {
+      "name": "Jane",
+      "gender": "feminine"
+    }
+  }
+&lt;/script>
+&lt;h1 data-l10n-id="title">&lt;/h1>
+&lt;p data-l10n-id="hello">&lt;/p></code></pre>
+    </div></article>
+
+    <article class="l20n-5 center"><div class="wrapper">
+<pre><code class="language-javascript">var node = document.querySelector(
+  '[data-l10n-id="hello"]');
+node.textContent = document.l10n.get(
+  'title',
+  {"user": {
+    "name": "Jane",
+    "gender": "feminine"
+  }});</code></pre>
+    </div></article>
+
+
+    <article class="center center-text game-adaptive"><div class="wrapper">
+      <hgroup>
+       <h1>Адаптивность <b>в играх</b></h1>
+      </hgroup>
+    </div></article>
+
+    <article class="center center-text adaptive-feature"><div class="wrapper">
+      <hgroup>
+        <h1>Feature Detection</h1>
+      </hgroup>
+    </div></article>
+
+    <article class="modernizr-link center-text">
+      <img src="img/modernizr-link.svg" alt="vcard">
+      <h1>modernizr.com</h1>
+    </article>
+
+    <article class="sprite-code mordernizr-code center"><div class="wrapper">
+<pre><code class="language-markup">&lt;html lang="ru-RU" class="js
+  canvas
+  canvastext
+  webgl
+  no-touch
+  geolocation
+  postmessage
+  websqldatabase
+  ...
+  inlinesvg
+  svgclippaths"></code></pre>
+    </div></article>
+
+    <article class="center center-text detect-3d"><div class="wrapper">
+      <hgroup>
+       <h1>Как определять поддержку <b>preserve-3d</b></h1>
+      </hgroup>
+    </div></article>
+
+    <article class="sprite-code preserv-p1-code center"><div class="wrapper">
+<pre><code class="language-javascript">(function getPerspective(){
+  var element = document.createElement('p'),
+      html = document.getElementsByTagName('HTML')[0],
+      body = document.getElementsByTagName('BODY')[0],
+      propertys = {
+        'webkitTransformStyle':'-webkit-transform-style',
+        'MozTransformStyle':'-moz-transform-style',
+        'msTransformStyle':'-ms-transform-style',
+        'transformStyle':'transform-style'
+      };
+  //…
+})();</code></pre>
+    </div></article>
+
+    <article class="sprite-code preserv-p2-code center"><div class="wrapper">
+<pre><code class="language-javascript">(function getPerspective(){
+  //…
+  body.insertBefore(element, null);
+  for (var i in propertys) {
+      if (element.style[i] !== undefined) {
+          element.style[i] = "preserve-3d";
+      }
+  }
+  //…
+})();
+</code></pre>
+    </div></article>
+
+    <article class="sprite-code preserv-p3-code center"><div class="wrapper">
+<pre><code class="language-javascript">(function getPerspective(){
+  //…
+  var st = window.getComputedStyle(element, null),
+      transform = st.getPropertyValue("-webkit-transform-style") ||
+                  st.getPropertyValue("-moz-transform-style") ||
+                  st.getPropertyValue("-ms-transform-style") ||
+                  st.getPropertyValue("transform-style");
+  if(transform!=='preserve-3d'){html.className += ' no-preserve-3d ';}
+  document.body.removeChild(element);
+})();</code></pre>
+    </div></article>
+
+
+    <article class="sprite-code new-feature center"><div class="wrapper">
+<pre><code class="language-javascript">define(['Modernizr', 'testAllProps'],
+  function (Modernizr, testAllProps) {
+  Modernizr.addTest(
+    'preserve3d',
+    testAllProps(
+      'transformStyle',
+      'preserve-3d'));
+});</code></pre>
+</article>
+
+    <article class="center center-text adaptive-deg"><div class="wrapper">
+      <hgroup>
+        <h1>
+          Graceful degradation
+          <b>Progressive enhancement</b>
+        </h1>
+      </hgroup>
+    </div></article>
+
+    <article class="center no-good"></article>
+
+    <article class="remove-rotate center"><div class="wrapper">
+<pre><code class="language-css">.no-preserve-3d .rotation{
+  display: none;
+  }
+.no-preserve-3d .zoom{
+  top: 84px;
+  }</code></pre>
+    </div></article>
+
+    <article class="center no-rotation"></article>
+
+    <article class="change-bg-code center"><div class="wrapper">
+<pre><code class="language-css">.no-preserve-3d .church{
+    background:
+      url("../img/curch.png")
+      50% 50% no-repeat;
+    background-size: contain;
+    }
+.no-preserve-3d .church *{
+  display: none;
+  }</code></pre>
+    </div></article>
+
+  <article class="center change-bg"></article>
+  <article class="center oops"></article>
+
+    <article class="center center-text mouse-ev"><div class="wrapper">
+      <hgroup>
+        <h1>Cобытия мыши
+          <b>и мобильные устройства</b></h1>
+      </hgroup>
+    </div></article>
+
+    <article class="fc-link center-text">
+      <h1>FT Labs FastClick</h1>
+      <img src="img/fc-link.svg" alt="vcard">
+      <h1>http://goo.gl/SPOlX</h1>
+    </article>
+
+
+    <article class="center center-text performance"><div class="wrapper">
+      <hgroup>
+       <h1>Как определить<br>есть ли проблемы с производительностью?</h1>
+      </hgroup>
+    </div></article>
+
+    <article class="center center-text performance"><div class="wrapper">
+      <hgroup>
+       <h1>Chrome FPS <B>counter</b></h1>
+      </hgroup>
+    </div></article>
+
+    <article class="center center-text performance"><div class="wrapper">
+      <hgroup>
+       <h1>chrome://flags/</h1>
+      </hgroup>
+    </div></article>
+
+    <article class="center flags"></article>
+    <article class="center fps-large"></article>
+
+    <article class="center center-text statsjs"><div class="wrapper">
+      <hgroup>
+       <h1>stats.js</h1>
+      </hgroup>
+    </div></article>
+
+    <article class="statsjs-link">
+      <div class="column">
+        <img src="img/statsjs-git.svg" alt="vcard">
+        <h1 class="icon-github">goo.gl/hXoib</h1>
+      </div>
+      <div class="column">
+        <img src="img/statsjs-bokkmarklet.svg" alt="vcard">
+        <h1 class="icon-globe">goo.gl/fIMYP</h1>
+      </div>
+    </article>
+
+    <article class="center statsjs-fps"></article>
+    <article class="center statsjs-ms"></article>
+
+    <article class="jsperf-link">
+      <img src="img/jsperf-link.svg" alt="vcard">
+      <h1>jsperf.com</h1>
+    </article>
+
+    <article class="center center-text profiler"><div class="wrapper">
+      <hgroup>
+       <h1>Developer tools <b>profiler</b></h1>
+      </hgroup>
+    </div></article>
+
+    <article class="center profiler-bg"></article>
+    <article class="center ff-profiler-bg"></article>
+    <article class="center ie-profiler-bg"></article>
+
+
+    <article class="center center-text timeline"><div class="wrapper">
+      <hgroup>
+       <h1>Developer tools <b>timeline</b></h1>
+      </hgroup>
+    </div></article>
+
+    <article class="center timeline-screen"></article>
+
+
+    <article class="useit center-text center"><div class="wrapper">
+      <hgroup>
+        <h1>Полезные <b>ссылки</b></h1>
+      </hgroup>
+    </div></article>
+
+    <article class="spine-title center-text center"><div class="wrapper">
+      <hgroup>
+        <h1><b>Spriter</b></h1>
+      </hgroup>
+    </div></article>
+
+    <article class="spriter-screen center-text">
+      <div class="spriter-price"></div>
+    </article>
+
+    <article class="app-link center-text">
+      <img src="img/spriter-link.svg" alt="vcard">
+      <h1>http://brashmonkey.com/</h1>
+    </article>
+
+    <article class="spine-title center-text center"><div class="wrapper">
+      <hgroup>
+        <h1><b>Spine</b></h1>
+      </hgroup>
+    </div></article>
+
+    <article class="spine-screen center-text">
+      <div class="spine-price"></div>
+    </article>
+
+    <article class="app-link center-text">
+      <img src="img/spine-link.svg" alt="vcard">
+      <h1>http://esotericsoftware.com/</h1>
+    </article>
+
+    <article class="shoe-box-title center-text center"><div class="wrapper">
+      <hgroup>
+        <h1><b>ShoeBox</b></h1>
+      </hgroup>
+    </div></article>
+
+    <article class="shoe-box-screen center-text"></article>
+
+    <article class="app-link center-text">
+      <img src="img/shoe-link.svg" alt="vcard">
+      <h1>http://goo.gl/VQhu8</h1>
+    </article>
+
+    <article class="tp-title center-text center"><div class="wrapper">
+      <hgroup>
+        <h1><b>TexturePacker</b></h1>
+      </hgroup>
+    </div></article>
+
+    <article class="tp-screen center-text"></article>
+
+    <article class="app-link center-text">
+      <img src="img/tp-link.svg" alt="vcard">
+      <h1>http://goo.gl/K7D4f</h1>
+    </article>
+
+    <article class="forum-title center-text center"><div class="wrapper">
+      <hgroup>
+        <h1><b>HTML5 Game Dev</b></h1>
+      </hgroup>
+    </div></article>
+
+    <article class="forum-screen center-text"></article>
+
+    <article class="app-link center-text">
+      <img src="img/forum-link.svg" alt="vcard">
+      <h1>http://html5gamedevs.com/</h1>
+    </article>
+
+    <article class="center-text center end"><div class="wrapper">
+      <hgroup>
+        <h1>Поиграем?</h1>
+      </hgroup>
+    </div></article>
+
+    <article class="vcard center contacts"><div class="wrapper">
+      <img src="img/vcard.svg" alt="vcard">
+      <p>Anton Nemtsev</p>
+      <p>http://frontender.info/</p>
+      <p>thesilentimp@gmail.com</p>
+      <p>@silentimp</p>
+      <p><b>skype:</b> ravencry</p>
+      <br>
+<!--       <a href="http://websaints.net/ritpp.zip">http://goo.gl/Cnqn3</a> -->
+    </div></article>
+
+
+  </section>
+  <div class="progress"><div><div></div></div></div>
+  <div class="lightbox"></div>
+</body>
+</html>
