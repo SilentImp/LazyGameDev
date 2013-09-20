@@ -17,5 +17,5 @@
 
 ## Видео
 
-* https://vimeo.com/74731054 — РИТ 23.04.2013
-* http://www.youtube.com/watch?v=G3J2-BFdUt8 — KharkivJS 23.06.2013
+* https://vimeo.com/74731054 — РИТ *23.04.2013*
+* http://www.youtube.com/watch?v=G3J2-BFdUt8 — KharkivJS *23.06.2013*
