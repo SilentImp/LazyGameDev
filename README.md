@@ -1,4 +1,15 @@
-LazyGameDev
-===========
+# Ленивая разработка игр
 
-Доклад про lazy game dev
+Доклад про ленивую разработку казуальных игр с использованием JavaScript и DOM
+
+## Презентация
+
+* http://silentimp.github.io/LazyGameDev/index.html — одним файлом
+* http://silentimp.github.io/LazyGameDev/index-p1.html — первая часть
+* http://silentimp.github.io/LazyGameDev/index-p2.html — вторая часть
+* http://silentimp.github.io/LazyGameDev/index-p3.html — третья часть
+
+## Видео
+
+* https://vimeo.com/74731054
+* http://www.youtube.com/watch?v=G3J2-BFdUt8
