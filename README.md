@@ -18,4 +18,4 @@
 ## Видео
 
 * https://vimeo.com/74731054 — __РИТ++__ *23.04.2013*
-* http://www.youtube.com/watch?v=G3J2-BFdUt8 - **KharkivJS** *23.06.2013*
+* http://www.youtube.com/watch?v=G3J2-BFdUt8 — __KharkivJS__ *23.06.2013*
